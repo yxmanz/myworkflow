@@ -8,7 +8,7 @@ on:
 jobs: 
   # job name,
   my-first-workflow:
-    # OS that this workflow will be running on
+    # OS that this workflow will be running on, must have space between key runs-on and value ubuntu
     runs-on: ubuntu-latest
 
     # list of steps to perform task
