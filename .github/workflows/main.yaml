@@ -1,0 +1,20 @@
+name: My First Workflow
+
+# trigger #: comments
+on: 
+- push #need to have space between - and push, can also use array like in lecture notes [push]
+
+#Jobs in the workflow
+jobs: 
+  # job name,
+  my-first-workflow:
+    # OS that this workflow will be running on
+    runs-on: ubuntu-latest
+
+    # list of steps to perform task
+    steps:
+    - name: echo the date
+      run: echo "The current time and date in GitHub is $(date)"
+    - name: echo information about the context
+      run: echo "head_ref - ${{ github.head_ref }}, owner - ${{ github.repository_owner }}"
+      
